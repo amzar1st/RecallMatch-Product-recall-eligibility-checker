@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Check model and lot codes against U.S. CPSC recall 24-120.">
+  <title>RecallMatch — Product recall eligibility checker</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="bar wrap">
+    <a class="brand" href="./"><span class="mark" aria-hidden="true">✓</span> RecallMatch</a>
+    <a href="https://github.com/amzar1st/RecallMatch-Product-recall-eligibility-checker">Source code ↗</a>
+  </header>
+  <main class="wrap">
+    <section class="intro">
+      <p class="eyebrow">U.S. CPSC NOTICE 24-120</p>
+      <h1>Does this recall<br>cover your product?</h1>
+      <p class="lede">Check a Rhino 24-foot Hot Foot Climbing Stick using the model and lot code on its support pole.</p>
+    </section>
+    <div class="grid">
+      <section class="card">
+        <h2>Check eligibility</h2>
+        <p id="network" class="network" role="status"></p>
+        <form id="checker">
+          <label for="model">Model number</label>
+          <input id="model" autocomplete="off" maxlength="32" placeholder="RTSL-24">
+          <label for="lot">Lot code <span>· leave blank if unreadable</span></label>
+          <input id="lot" autocomplete="off" maxlength="32" placeholder="2312AB">
+          <button id="submit">Check product</button>
+        </form>
+        <div class="examples" aria-label="Demo cases">
+          <button type="button" data-lot="2312AB">Matching lot</button>
+          <button type="button" data-lot="2401AB">Excluded lot</button>
+          <button type="button" data-lot="">Missing lot</button>
+        </div>
+      </section>
+      <section class="card result" aria-live="polite" aria-atomic="true">
+        <p class="eyebrow" id="provenance">RECALL ELIGIBILITY</p>
+        <h2 id="outcome">Awaiting a check</h2>
+        <p id="explanation">Enter the product codes or choose one of the demo cases.</p>
+        <div class="rule">
+          <strong>Rule in this notice</strong>
+          <p id="rule">Model RTSL-24 with a lot year of 2023 or earlier.</p>
+          <a href="https://www.cpsc.gov/Recalls/2024/FeraDyne-Outdoors-Recalls-Rhino-Climbing-Sticks-Due-to-Fall-and-Laceration-Hazards">Read the official CPSC notice ↗</a>
+        </div>
+        <p class="small">Results apply only to this notice. Follow the instructions in the official notice.</p>
+        <details id="proof" hidden><summary>Verification details</summary><p id="proof-text"></p></details>
+      </section>
+    </div>
+    <section class="card ledger" id="ledger" hidden>
+      <h2>Record on Studionet</h2>
+      <p>Send <code>record_check</code> from your built-in Studio account. Transaction arguments are public.</p>
+      <a href="https://studio.genlayer.com/" target="_blank" rel="noopener noreferrer">Open GenLayer Studio ↗</a>
+      <p><code id="studio-args"></code></p>
+      <form id="track">
+        <label for="account">Studio account address</label><input id="account" maxlength="42" required>
+        <label for="id">Check ID</label><input id="id" maxlength="32" required>
+        <label for="hash">Transaction hash</label><input id="hash" maxlength="66" required>
+        <button>Track transaction</button>
+      </form>
+      <p id="tracking" role="status"></p>
+      <a id="explorer" hidden>View transaction ↗</a>
+    </section>
+  </main>
+  <footer class="wrap">RecallMatch <span>·</span> U.S. Consumer Product Safety Commission notice 24-120</footer>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

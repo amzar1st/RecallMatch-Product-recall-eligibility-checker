@@ -1,0 +1,38 @@
+:root{font-family:system-ui,sans-serif;color:#152c25;background:#f2f4ec;line-height:1.55;--ink:#152c25;--muted:#4c5c52;--green:#24513d;--line:#c9d2c5}
+*{box-sizing:border-box}
+body{margin:0}
+[hidden]{display:none!important}
+.wrap{width:min(1080px,calc(100% - 40px));margin:auto}
+.bar{display:flex;justify-content:space-between;align-items:center;padding:20px 0;border-bottom:1px solid var(--line)}
+.bar a{color:var(--green);font-size:.9rem}
+.bar .brand{text-decoration:none;color:var(--ink);font-weight:800;font-size:1.13rem}
+.mark{display:inline-grid;place-items:center;width:30px;height:30px;background:var(--green);color:white;border-radius:9px;margin-right:7px}
+.intro{padding:46px 0 32px}
+h1,h2,p{margin:0}
+h1{font-family:Georgia,serif;font-weight:500;font-size:clamp(3rem,8vw,6rem);letter-spacing:-.058em;line-height:.99;margin:12px 0 18px}
+h2{font-size:1.55rem;line-height:1.2;letter-spacing:-.03em}
+.eyebrow{font-size:.75rem;font-weight:750;letter-spacing:.13em;color:var(--green)}
+.lede{max-width:540px;font-size:1.12rem;color:var(--muted)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.card{border:1px solid var(--line);border-radius:18px;padding:clamp(19px,4vw,34px);background:#fbfcf7;min-width:0}
+.network,.small{font-size:.85rem;color:var(--muted);margin-top:10px}
+form{display:grid;gap:8px;margin-top:20px}
+label{font-weight:700}
+label span{font-weight:400;color:var(--muted);font-size:.85rem}
+input,button{font:inherit}
+input{width:100%;padding:11px 12px;border:1px solid #89998e;border-radius:8px;color:var(--ink);background:white;margin-bottom:7px}
+button{cursor:pointer;border:1px solid transparent;background:var(--green);color:white;padding:10px 13px;border-radius:8px;font-weight:750}
+button:disabled{opacity:.55;cursor:wait}
+.examples{display:flex;gap:6px;flex-wrap:wrap;margin-top:15px}
+.examples button{background:#edf1e8;color:var(--green);border:1px solid var(--line);font-size:.78rem;padding:6px 9px}
+a{color:#255941;text-underline-offset:3px}
+:focus-visible{outline:3px solid #a64c12;outline-offset:3px}
+.result{background:#e6eee1}
+.result h2{font-family:Georgia,serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:500;margin:12px 0}
+.rule{border-top:1px solid #acbeab;margin-top:24px;padding-top:16px}
+.rule a{display:inline-block;margin-top:9px}
+details,.ledger{margin-top:18px}
+.ledger p{margin:9px 0}
+code,#proof-text{overflow-wrap:anywhere}
+footer{padding:24px 0;color:var(--muted);font-size:.85rem}
+@media(max-width:740px){.grid{grid-template-columns:1fr}.intro{padding-top:32px}}
