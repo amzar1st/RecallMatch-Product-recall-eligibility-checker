@@ -14,6 +14,7 @@ fake.Address = str
 fake.TreeMap = dict
 fake.gl = types.SimpleNamespace(
     Contract=object, public=types.SimpleNamespace(view=identity, write=identity),
+    vm=types.SimpleNamespace(UserError=ValueError),
     message=types.SimpleNamespace(sender_address=sender),
     nondet=types.SimpleNamespace(web=types.SimpleNamespace(render=Mock())),
     eq_principle=types.SimpleNamespace(strict_eq=Mock(side_effect=lambda fetch: fetch())),

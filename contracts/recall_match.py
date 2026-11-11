@@ -80,9 +80,9 @@ class RecallMatch(gl.Contract):
     @gl.public.write
     def verify_notice(self) -> None:
         if gl.message.sender_address != self.owner:
-            raise ValueError("Only the deployer can verify this notice")
+            raise gl.vm.UserError("Only the deployer can verify this notice")
         if self.verified_rule:
-            raise ValueError("Notice already verified")
+            raise gl.vm.UserError("Notice already verified")
 
         def independently_read_notice() -> str:
             return parse_notice(gl.nondet.web.render(SOURCE, mode="text"))
@@ -96,11 +96,11 @@ class RecallMatch(gl.Contract):
     @gl.public.view
     def preview(self, model: str, lot: str) -> str:
         if not self.verified_rule:
-            raise ValueError("Notice has no consensus-verified rule")
+            raise gl.vm.UserError("Notice has no consensus-verified rule")
         if len(model) > 32 or len(lot) > 32:
-            raise ValueError("Model and lot have a 32-character limit")
+            raise gl.vm.UserError("Model and lot have a 32-character limit")
         if not model.isascii() or not lot.isascii():
-            raise ValueError("Use ASCII product codes")
+            raise gl.vm.UserError("Use ASCII product codes")
         rule = json.loads(self.verified_rule)
         outcome, reason = verdict(model.strip().upper(), lot.strip().upper(), rule)
         return encode({"outcome": outcome, "reason": reason,
@@ -109,19 +109,19 @@ class RecallMatch(gl.Contract):
     @gl.public.write
     def record_check(self, check_id: str, model: str, lot: str) -> str:
         if not re.fullmatch(r"[0-9a-f]{32}", check_id):
-            raise ValueError("Check ID must be 32 lowercase hexadecimal characters")
+            raise gl.vm.UserError("Check ID must be 32 lowercase hexadecimal characters")
         key = str(gl.message.sender_address).lower() + ":" + check_id
         result = json.loads(self.preview(model, lot))
         result["input_sha256"] = digest(encode({"model": model.strip().upper(), "lot": lot.strip().upper()}))
         result = encode(result)
         existing = self.checks.get(key, "")
         if existing and existing != result:
-            raise ValueError("Check ID already used for a different result")
+            raise gl.vm.UserError("Check ID already used for a different result")
         self.checks[key] = result
         return check_id
 
     @gl.public.view
     def get_check(self, account: str, check_id: str) -> str:
         if not re.fullmatch(r"0x[0-9a-fA-F]{40}", account) or not re.fullmatch(r"[0-9a-f]{32}", check_id):
-            raise ValueError("Invalid account or check ID")
+            raise gl.vm.UserError("Invalid account or check ID")
         return self.checks.get(account.lower() + ":" + check_id, "")

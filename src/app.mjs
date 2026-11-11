@@ -1,7 +1,7 @@
 import {createClient} from "genlayer-js";
 import {studionet} from "genlayer-js/chains";
 import {TransactionHashVariant} from "genlayer-js/types";
-import {contractAddress} from "../dist/deployment.mjs";
+import {contractAddress, liveExamples, studioAccount} from "../dist/deployment.mjs";
 import {accountAddress, checkId, decodeResult, inspectRecord, txHash} from "./lifecycle.mjs";
 
 const byId = id => document.getElementById(id);
@@ -50,8 +50,14 @@ function error(title, message) {
 
 async function check() {
   const request = ++checkGeneration;
-  const model = byId("model").value.trim().toUpperCase();
-  const lot = byId("lot").value.trim().toUpperCase();
+  const enteredModel = byId("model").value;
+  const enteredLot = byId("lot").value;
+  const model = enteredModel.trim().toUpperCase();
+  const lot = enteredLot.trim().toUpperCase();
+  if (/[^\x20-\x7e]/.test(enteredModel + enteredLot)) {
+    error("Check the product codes", "Use the letters, numbers, or hyphens printed on the label.");
+    return;
+  }
   if (!client) {
     if (model === "RTSL-24" && demos.has(lot)) {
       render(demos.get(lot), "ILLUSTRATIVE DEMO · " + demos.get(lot).outcome);
@@ -114,7 +120,21 @@ set("network", configured ? "GenLayer Studionet · Finalized state" : "Preview m
 if (configured) {
   byId("ledger").hidden = false;
   studio.href = "https://studio.genlayer.com/?import-contract=" + contractAddress;
-  byId("track").addEventListener("submit", event => {
+  byId("contract-link").href = "https://explorer-studio.genlayer.com/address/" + contractAddress;
+  const form = byId("track");
+  for (const example of liveExamples) {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.textContent = example.label;
+    button.addEventListener("click", () => {
+      byId("account").value = studioAccount;
+      byId("id").value = example.id;
+      byId("hash").value = example.hash;
+      form.requestSubmit();
+    });
+    byId("live-examples").append(button);
+  }
+  form.addEventListener("submit", event => {
     event.preventDefault();
     const hash = byId("hash").value.trim();
     const account = byId("account").value.trim();

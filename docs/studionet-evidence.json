@@ -1,0 +1,317 @@
+{
+  "chainId": 61999,
+  "address": "0x81F97A3AB7422E77E5C6A07db9A26496b342Ba3A",
+  "account": "0x62750Bb60A705B27B96867c60665D47cCF5B1Dd7",
+  "sourceSha256": "43329742e113055b80846c882f4a901cb997bb53eca5ff9645f2c53ee72f0b9b",
+  "ruleSha256": "47dbfc372e9a694cd06cc86b8d2b0094fca4102cc03477db6bc70c160a41067c",
+  "deployment": {
+    "hash": "0xf64cf4d7ee491f412c63c3569f2894201be5277ba253ce7bca66d65ea8e02e40",
+    "status": "FINALIZED",
+    "from": "0x62750Bb60A705B27B96867c60665D47cCF5B1Dd7",
+    "to": "0x81F97A3AB7422E77E5C6A07db9A26496b342Ba3A",
+    "execution": "SUCCESS",
+    "result": {
+      "raw": "AAA=",
+      "status": "return",
+      "payload": {
+        "raw": [
+          0
+        ],
+        "readable": "null"
+      }
+    },
+    "votes": {
+      "0x1Cd67946A11E6410a3DF1b27d35F4a511e93c882": "agree",
+      "0x37CD8552B86b2B662eCfb69C4A1253dBE41EB4C1": "idle",
+      "0x722474B013fA39E5aA8785f927dCeB0e3F89815B": "agree",
+      "0x8ADae333478F9D037c78b0E3E8279DdAAb20a1B3": "idle",
+      "0xc675c2B7E1F066B7c1D2fe54EF7B76C91CdFa5F4": "agree"
+    }
+  },
+  "verification": {
+    "hash": "0x180256c29607eda5140f772c1a96703bfa186673ec704741b767e85144f12df7",
+    "status": "FINALIZED",
+    "from": "0x62750Bb60A705B27B96867c60665D47cCF5B1Dd7",
+    "to": "0x81F97A3AB7422E77E5C6A07db9A26496b342Ba3A",
+    "execution": "SUCCESS",
+    "result": {
+      "raw": "AAA=",
+      "status": "return",
+      "payload": {
+        "raw": [
+          0
+        ],
+        "readable": "null"
+      }
+    },
+    "votes": {
+      "0x1Cd67946A11E6410a3DF1b27d35F4a511e93c882": "idle",
+      "0x560FBD37a10bC2B96F118071e922c9106c12Ba1d": "agree",
+      "0x8ADae333478F9D037c78b0E3E8279DdAAb20a1B3": "agree",
+      "0x8f1abcAF0fF10678Af925f83b2Bb8b3534c4b94b": "agree",
+      "0xC65Ec56a1141866951B34D846be8EF433764A48B": "idle"
+    }
+  },
+  "rule": {
+    "details_sha256": "d5ba8b7cbb597f1838e10edb9168ac1f3e55b515a1342cea50cc4582b422d2c9",
+    "evidence": "Lot codes with calendar year 2023 and all previous years are included in this recall.",
+    "lot_format": "YYMMxx",
+    "max_lot_year": 2023,
+    "model": "RTSL-24",
+    "notice": "24-120",
+    "section": "Recall Details / Description",
+    "source": "https://www.cpsc.gov/Recalls/2024/FeraDyne-Outdoors-Recalls-Rhino-Climbing-Sticks-Due-to-Fall-and-Laceration-Hazards"
+  },
+  "records": [
+    {
+      "label": "Matching record",
+      "checkId": "3c7eb0a228dc6b49d4d9722b3ce6055b",
+      "lot": "2312AB",
+      "decision": {
+        "details_sha256": "d5ba8b7cbb597f1838e10edb9168ac1f3e55b515a1342cea50cc4582b422d2c9",
+        "evidence": "Lot codes with calendar year 2023 and all previous years are included in this recall.",
+        "input_sha256": "1d4159cb471d4334166d3b0d276beb9a07c935c7b1ea10ab471a7ceadf1349e1",
+        "lot_format": "YYMMxx",
+        "max_lot_year": 2023,
+        "model": "RTSL-24",
+        "notice": "24-120",
+        "outcome": "MATCH",
+        "reason": "LOT_YEAR_INCLUDED",
+        "rule_sha256": "47dbfc372e9a694cd06cc86b8d2b0094fca4102cc03477db6bc70c160a41067c",
+        "section": "Recall Details / Description",
+        "source": "https://www.cpsc.gov/Recalls/2024/FeraDyne-Outdoors-Recalls-Rhino-Climbing-Sticks-Due-to-Fall-and-Laceration-Hazards"
+      },
+      "receipt": {
+        "hash": "0x2919ed9d9ee505d73d114e76dafe0568f9315101a049425ae612de2e87e88879",
+        "status": "FINALIZED",
+        "from": "0x62750Bb60A705B27B96867c60665D47cCF5B1Dd7",
+        "to": "0x81F97A3AB7422E77E5C6A07db9A26496b342Ba3A",
+        "execution": "SUCCESS",
+        "result": {
+          "raw": "AIQCM2M3ZWIwYTIyOGRjNmI0OWQ0ZDk3MjJiM2NlNjA1NWI=",
+          "status": "return",
+          "payload": {
+            "raw": [
+              132,
+              2,
+              51,
+              99,
+              55,
+              101,
+              98,
+              48,
+              97,
+              50,
+              50,
+              56,
+              100,
+              99,
+              54,
+              98,
+              52,
+              57,
+              100,
+              52,
+              100,
+              57,
+              55,
+              50,
+              50,
+              98,
+              51,
+              99,
+              101,
+              54,
+              48,
+              53,
+              53,
+              98
+            ],
+            "readable": "\"3c7eb0a228dc6b49d4d9722b3ce6055b\""
+          }
+        },
+        "votes": {
+          "0x1Cd67946A11E6410a3DF1b27d35F4a511e93c882": "agree",
+          "0x560FBD37a10bC2B96F118071e922c9106c12Ba1d": "agree",
+          "0x722474B013fA39E5aA8785f927dCeB0e3F89815B": "agree",
+          "0xD0eD149D26E76cf49fB588c970E608E44Dd4DAB8": "idle",
+          "0xe83D7241D0FF0f1f808B9ab3cb06dD2565bDc605": "idle"
+        }
+      }
+    },
+    {
+      "label": "Excluded record",
+      "checkId": "c06ec342d75f4a4385c0e0bb113a97cc",
+      "lot": "2401AB",
+      "decision": {
+        "details_sha256": "d5ba8b7cbb597f1838e10edb9168ac1f3e55b515a1342cea50cc4582b422d2c9",
+        "evidence": "Lot codes with calendar year 2023 and all previous years are included in this recall.",
+        "input_sha256": "c15a1c9e7367ef47205d428488b016741055514861abd72c4f4daccc2b292e50",
+        "lot_format": "YYMMxx",
+        "max_lot_year": 2023,
+        "model": "RTSL-24",
+        "notice": "24-120",
+        "outcome": "NO_MATCH",
+        "reason": "LOT_YEAR_EXCLUDED",
+        "rule_sha256": "47dbfc372e9a694cd06cc86b8d2b0094fca4102cc03477db6bc70c160a41067c",
+        "section": "Recall Details / Description",
+        "source": "https://www.cpsc.gov/Recalls/2024/FeraDyne-Outdoors-Recalls-Rhino-Climbing-Sticks-Due-to-Fall-and-Laceration-Hazards"
+      },
+      "receipt": {
+        "hash": "0xc4e4d6cbc154f983103bfa1b6cf913418571703801cabfbc7aa3dbf1acadac86",
+        "status": "FINALIZED",
+        "from": "0x62750Bb60A705B27B96867c60665D47cCF5B1Dd7",
+        "to": "0x81F97A3AB7422E77E5C6A07db9A26496b342Ba3A",
+        "execution": "SUCCESS",
+        "result": {
+          "raw": "AIQCYzA2ZWMzNDJkNzVmNGE0Mzg1YzBlMGJiMTEzYTk3Y2M=",
+          "status": "return",
+          "payload": {
+            "raw": [
+              132,
+              2,
+              99,
+              48,
+              54,
+              101,
+              99,
+              51,
+              52,
+              50,
+              100,
+              55,
+              53,
+              102,
+              52,
+              97,
+              52,
+              51,
+              56,
+              53,
+              99,
+              48,
+              101,
+              48,
+              98,
+              98,
+              49,
+              49,
+              51,
+              97,
+              57,
+              55,
+              99,
+              99
+            ],
+            "readable": "\"c06ec342d75f4a4385c0e0bb113a97cc\""
+          }
+        },
+        "votes": {
+          "0x0174b4D7494Be33F46B76976f6c9F94004F1b27f": "idle",
+          "0x1Cd67946A11E6410a3DF1b27d35F4a511e93c882": "agree",
+          "0x560FBD37a10bC2B96F118071e922c9106c12Ba1d": "agree",
+          "0x8644a8D2D08903cAFA1F0fb28E34E0ecA727e9ED": "agree",
+          "0x8ADae333478F9D037c78b0E3E8279DdAAb20a1B3": "idle"
+        }
+      }
+    },
+    {
+      "label": "Missing-lot record",
+      "checkId": "bc1ecc82d646470fb794ba543372950e",
+      "lot": "",
+      "decision": {
+        "details_sha256": "d5ba8b7cbb597f1838e10edb9168ac1f3e55b515a1342cea50cc4582b422d2c9",
+        "evidence": "Lot codes with calendar year 2023 and all previous years are included in this recall.",
+        "input_sha256": "fa6b898f7593a9337d4c5cb690de129fd0b3fb0bd0bd68adf4bdac42f3f38721",
+        "lot_format": "YYMMxx",
+        "max_lot_year": 2023,
+        "model": "RTSL-24",
+        "notice": "24-120",
+        "outcome": "NEEDS_MORE_INFO",
+        "reason": "LOT_REQUIRED_OR_INVALID",
+        "rule_sha256": "47dbfc372e9a694cd06cc86b8d2b0094fca4102cc03477db6bc70c160a41067c",
+        "section": "Recall Details / Description",
+        "source": "https://www.cpsc.gov/Recalls/2024/FeraDyne-Outdoors-Recalls-Rhino-Climbing-Sticks-Due-to-Fall-and-Laceration-Hazards"
+      },
+      "receipt": {
+        "hash": "0x686dce7f9d0ca2560ef934a2f8a1b88b304b4e4f914256037c57f7fb0f7a904e",
+        "status": "FINALIZED",
+        "from": "0x62750Bb60A705B27B96867c60665D47cCF5B1Dd7",
+        "to": "0x81F97A3AB7422E77E5C6A07db9A26496b342Ba3A",
+        "execution": "SUCCESS",
+        "result": {
+          "raw": "AIQCYmMxZWNjODJkNjQ2NDcwZmI3OTRiYTU0MzM3Mjk1MGU=",
+          "status": "return",
+          "payload": {
+            "raw": [
+              132,
+              2,
+              98,
+              99,
+              49,
+              101,
+              99,
+              99,
+              56,
+              50,
+              100,
+              54,
+              52,
+              54,
+              52,
+              55,
+              48,
+              102,
+              98,
+              55,
+              57,
+              52,
+              98,
+              97,
+              53,
+              52,
+              51,
+              51,
+              55,
+              50,
+              57,
+              53,
+              48,
+              101
+            ],
+            "readable": "\"bc1ecc82d646470fb794ba543372950e\""
+          }
+        },
+        "votes": {
+          "0x560FBD37a10bC2B96F118071e922c9106c12Ba1d": "agree",
+          "0x711353514049EAc21213834ADd07eF552aF394E6": "agree",
+          "0x8ADae333478F9D037c78b0E3E8279DdAAb20a1B3": "agree",
+          "0xc675c2B7E1F066B7c1D2fe54EF7B76C91CdFa5F4": "idle",
+          "0xe1626534791FC675ED813Cc2C89C427866526113": "idle"
+        }
+      }
+    },
+    {
+      "label": "Rejected transaction",
+      "receipt": {
+        "hash": "0x92ba0e5d1532f553ab7f9fe231c2852b4c945e5f3e75f938bebed41b4f4e74e8",
+        "status": "FINALIZED",
+        "from": "0x62750Bb60A705B27B96867c60665D47cCF5B1Dd7",
+        "to": "0x81F97A3AB7422E77E5C6A07db9A26496b342Ba3A",
+        "execution": "ERROR",
+        "result": {
+          "raw": "AUNoZWNrIElEIG11c3QgYmUgMzIgbG93ZXJjYXNlIGhleGFkZWNpbWFsIGNoYXJhY3RlcnM=",
+          "status": "rollback",
+          "payload": "Check ID must be 32 lowercase hexadecimal characters"
+        },
+        "votes": {
+          "0x0174b4D7494Be33F46B76976f6c9F94004F1b27f": "agree",
+          "0x29300188B54F5BFEE91542595611603b4B201008": "idle",
+          "0x2bB088e4E6Fd1faBBd23d93F38D01f28a954A49c": "agree",
+          "0x709a1dDECA594C16AB3864A00Eaa2BB1Cd9b5305": "agree",
+          "0x722474B013fA39E5aA8785f927dCeB0e3F89815B": "idle"
+        }
+      }
+    }
+  ]
+}
